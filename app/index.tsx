@@ -19,6 +19,8 @@ export default function Home() {
           textAlign="center"
           color="primary-800"
           letterSpacing={0.1}
+          italic
+          underline
         >
           Custom styled text with medium weight, relaxed line height, wide letter spacing, center alignment, italic, and underline
         </TextComponent>

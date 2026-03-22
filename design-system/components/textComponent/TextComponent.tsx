@@ -55,7 +55,7 @@ export const TextComponent: React.FC<TextComponentProps> = ({
       fontWeight: fontWeight || typographyStyles?.fontWeight || '400',
       fontSize: fontSizeValue,
       lineHeight: resolveLineHeight(lineHeight, fontSizeValue, typographyStyles),
-      letterSpacing: resolveLetterSpacing(letterSpacing, typographyStyles),
+      letterSpacing: resolveLetterSpacing(letterSpacing, fontSizeValue, typographyStyles),
       textAlign: textAlign || 'auto',
       color: resolveColor(color),
       fontStyle: italic ? 'italic' : 'normal',
@@ -80,7 +80,15 @@ export const TextComponent: React.FC<TextComponentProps> = ({
     }
 
     if (typographyStyles?.fontWeight) {
-      classes.push(`font-${typographyStyles.fontWeight}`);
+      const fontWeightMap: Record<number, string> = {
+        300: 'light',
+        400: 'normal',
+        500: 'medium',
+        700: 'bold',
+        900: 'black'
+      };
+      const mappedToken = fontWeightMap[typographyStyles.fontWeight] || 'normal';
+      classes.push(`font-${mappedToken}`);
     }
 
     if (typographyStyles?.lineHeight) {

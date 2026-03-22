@@ -7,6 +7,6 @@
 
 @layer base {
     * {
-        font-family: 'Satoshi', system-ui, sans-serif;
+        font-family: Satoshi, system-ui, sans-serif;
     }
 }

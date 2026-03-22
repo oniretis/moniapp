@@ -35,6 +35,8 @@ export const colors = {
     400: '#797979',
     500: '#4D4D4D',
     600: '#282828',
+    700: '#1A1A1A',
+    800: '#0D0D0D',
   },
   success: {
     50: '#F6F8F7',
@@ -118,4 +120,4 @@ export const colors = {
 
 export type ColorPalette = typeof colors;
 export type ColorName = keyof ColorPalette;
-export type ColorShade = keyof ColorPalette[ColorName];
+// ColorShade is exported from textComponent/types.ts as DesignSystemColorShade for consistency

@@ -77,6 +77,7 @@ export const resolveLineHeight = (
 // Resolve letter spacing
 export const resolveLetterSpacing = (
   letterSpacing?: LetterSpacing | number,
+  fontSize: number = 16,
   typographyStyles?: any
 ): number => {
   if (typeof letterSpacing === 'number') {
@@ -85,10 +86,10 @@ export const resolveLetterSpacing = (
 
   const letterSpacingKey = letterSpacing || typographyStyles?.letterSpacing;
   if (letterSpacingKey && letterSpacings[letterSpacingKey as LetterSpacing]) {
-    return emToNumber(letterSpacings[letterSpacingKey as LetterSpacing]);
+    return emToNumber(letterSpacings[letterSpacingKey as LetterSpacing]) * fontSize;
   }
 
-  return 0.025;
+  return fontSize * 0.025;
 };
 
 // Get typography styles for variant/scale combination
@@ -110,7 +111,7 @@ export const resolveFontFamily = (
   typographyStyles?: any
 ): string => {
   const family = fontFamily || 'Satoshi';
-  const weight = (fontWeight || typographyStyles?.fontWeight || 400) as string;
+  const weight = String(fontWeight || typographyStyles?.fontWeight || 400);
 
   if (family === 'Satoshi') {
     const baseFont = SANS_FAMILY_MAP.Satoshi[weight] || 'Satoshi-Regular';
@@ -118,7 +119,8 @@ export const resolveFontFamily = (
       italic && weight === '500' ? 'Satoshi-MediumItalic' :
         italic && weight === '700' ? 'Satoshi-BoldItalic' :
           italic && weight === '900' ? 'Satoshi-BlackItalic' :
-            baseFont;
+            italic && weight === '300' ? 'Satoshi-LightItalic' :
+              baseFont;
   }
 
   return family;

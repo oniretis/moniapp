@@ -138,7 +138,7 @@
 /* Base Typography Styles */
 body {
   font-family: var(--font-sans);
-  font-size: var(--text-base);
+  font-size: var(--text-paragraph1);
   line-height: var(--leading-normal);
   letter-spacing: var(--tracking-normal);
 }

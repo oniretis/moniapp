@@ -26,9 +26,13 @@ export type TypographyScale =
   | LabelScale;
 
 export type ColorKey = keyof typeof colors;
-export type ColorShade = keyof typeof colors.primary;
 
-export type ColorValue = `${ColorKey}-${ColorShade}` | 'inherit' | 'transparent' | 'current' | 'black' | 'white';
+// Create a mapped type that only allows valid palette-shade combinations
+type ValidColorCombinations = {
+  [K in keyof typeof colors]: `${K}-${Extract<keyof typeof colors[K], string | number>}`
+}[keyof typeof colors];
+
+export type ColorValue = ValidColorCombinations | 'inherit' | 'transparent' | 'current' | 'black' | 'white';
 
 // Helper function to resolve color values
 export const resolveColor = (colorValue?: ColorValue | string): string | undefined => {
@@ -44,8 +48,17 @@ export const resolveColor = (colorValue?: ColorValue | string): string | undefin
   if (typeof colorValue === 'string') {
     const [colorKey, shade] = colorValue.split('-');
     const colorGroup = colors[colorKey as ColorKey];
+
     if (colorGroup && shade) {
-      return (colorGroup as any)[shade];
+      const resolvedColor = (colorGroup as any)[shade];
+
+      // Defensive runtime check: warn if the palette-shade combination doesn't exist
+      if (resolvedColor === undefined) {
+        console.warn(`Invalid color combination: "${colorValue}". The shade "${shade}" does not exist in the "${colorKey}" palette.`);
+        return undefined; // Fallback to undefined
+      }
+
+      return resolvedColor;
     }
   }
 
