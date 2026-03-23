@@ -1,0 +1,126 @@
+:root {
+  /* Primary Colors */
+  --primary-50: 246 248 251;
+  --primary-100: 234 242 251;
+  --primary-200: 199 220 245;
+  --primary-300: 143 185 233;
+  --primary-400: 95 148 220;
+  --primary-500: 58 114 204;
+  --primary-600: 47 95 181;
+  --primary-700: 37 76 147;
+  --primary-800: 29 60 117;
+  --primary-900: 22 46 89;
+  --primary-950: 15 31 61;
+
+  /* Surface Colors */
+  --surface-100: 255 255 255;
+  --surface-200: 249 250 252;
+  --surface-300: 242 245 248;
+  --surface-400: 236 239 245;
+  --surface-500: 229 234 241;
+  --surface-600: 223 229 238;
+
+  /* Background Colors */
+  --background-100: 253 253 253;
+  --background-200: 248 248 248;
+  --background-300: 243 243 243;
+  --background-400: 238 238 238;
+  --background-500: 235 235 235;
+  --background-600: 230 230 230;
+
+  /* Neutral Colors */
+  --neutral-100: 233 233 233;
+  --neutral-200: 210 210 210;
+  --neutral-300: 166 166 166;
+  --neutral-400: 121 121 121;
+  --neutral-500: 77 77 77;
+  --neutral-600: 40 40 40;
+
+  /* Success Colors */
+  --success-50: 246 248 247;
+  --success-100: 234 247 234;
+  --success-200: 205 239 208;
+  --success-300: 159 227 166;
+  --success-400: 111 212 122;
+  --success-500: 69 192 79;
+  --success-600: 52 166 62;
+  --success-700: 42 133 50;
+  --success-800: 33 103 40;
+  --success-900: 25 76 31;
+  --success-950: 15 46 19;
+
+  /* Info Colors */
+  --info-50: 246 248 251;
+  --info-100: 234 242 251;
+  --info-200: 199 220 245;
+  --info-300: 143 185 233;
+  --info-400: 95 148 220;
+  --info-500: 58 114 204;
+  --info-600: 47 95 181;
+  --info-700: 37 76 147;
+  --info-800: 29 60 117;
+  --info-900: 22 46 89;
+  --info-950: 15 31 61;
+
+  /* Warning Colors */
+  --warning-50: 255 249 235;
+  --warning-100: 255 240 199;
+  --warning-200: 255 224 143;
+  --warning-300: 255 204 77;
+  --warning-400: 255 184 28;
+  --warning-500: 245 158 11;
+  --warning-600: 217 119 6;
+  --warning-700: 180 83 9;
+  --warning-800: 124 62 11;
+  --warning-900: 91 46 10;
+  --warning-950: 58 29 5;
+
+  /* Danger Colors */
+  --danger-50: 255 243 241;
+  --danger-100: 255 227 223;
+  --danger-200: 255 197 189;
+  --danger-300: 255 169 157;
+  --danger-400: 255 118 100;
+  --danger-500: 250 68 44;
+  --danger-600: 237 47 21;
+  --danger-700: 200 35 13;
+  --danger-800: 165 33 15;
+  --danger-900: 136 34 20;
+  --danger-950: 92 18 10;
+
+  /* Secondary Colors */
+  --secondary-50: 255 254 234;
+  --secondary-100: 255 249 197;
+  --secondary-200: 255 244 133;
+  --secondary-300: 255 232 70;
+  --secondary-400: 255 215 27;
+  --secondary-500: 255 183 0;
+  --secondary-600: 226 140 0;
+  --secondary-700: 187 99 2;
+  --secondary-800: 152 76 8;
+  --secondary-900: 124 62 11;
+  --secondary-950: 72 31 0;
+
+  /* Tertiary Colors */
+  --tertiary-50: 246 248 251;
+  --tertiary-100: 234 244 251;
+  --tertiary-200: 205 231 245;
+  --tertiary-300: 123 196 232;
+  --tertiary-400: 31 166 209;
+  --tertiary-500: 10 140 183;
+  --tertiary-600: 10 110 145;
+  --tertiary-700: 10 86 113;
+  --tertiary-800: 8 63 82;
+  --tertiary-900: 6 44 58;
+  --tertiary-950: 4 27 36;
+}
+
+/* Dark theme variables (example) */
+@media (prefers-color-scheme: dark) {
+  :root {
+    --surface-100: 26 26 26;
+    --surface-200: 45 45 45;
+    --background-100: 10 10 10;
+    --background-200: 26 26 26;
+  }
+}

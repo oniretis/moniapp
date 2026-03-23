@@ -1,25 +1,34 @@
-import { Stack, Link } from 'expo-router';
+import { Stack } from 'expo-router';
 
 import { View } from 'react-native';
 
-import { Button } from '@/components/Button';
-import { Container } from '@/components/Container';
-import { ScreenContent } from '@/components/ScreenContent';
+
+
+import { TextComponent } from '@/design-system';
 
 export default function Home() {
   return (
     <View className={styles.container}>
       <Stack.Screen options={{ title: 'Home' }} />
-      <Container>
-        <ScreenContent path="app/index.tsx" title="Home"></ScreenContent>
-        <Link href={{ pathname: '/details', params: { name: 'Dan' } }} asChild>
-          <Button title="Show Details" />
-        </Link>
-      </Container>
+      <View className='mt-24'>
+        <TextComponent
+          variant="display"
+          scale="display1"
+          className="text-primary-600"
+          fontWeight={500}
+          textAlign="center"
+          color="primary-800"
+          letterSpacing={0.1}
+          italic
+          underline
+        >
+          Custom styled text with medium weight, relaxed line height, wide letter spacing, center alignment, italic, and underline
+        </TextComponent>
+      </View>
     </View>
   );
 }
 
 const styles = {
-  container: 'flex flex-1 bg-white',
+  container: 'flex-1 bg-white',
 };

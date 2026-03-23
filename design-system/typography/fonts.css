@@ -1,0 +1,253 @@
+/* Font Family Variables */
+:root {
+  --font-sans: 'Satoshi', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --font-mono: 'SF Mono', Monaco, 'Cascadia Code', 'Roboto Mono', Consolas, 'Courier New', monospace;
+}
+
+/* Font Face Declarations for Satoshi */
+@font-face {
+  font-family: 'Satoshi';
+  src: url('../../assets/fonts/Satoshi-Regular.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Satoshi';
+  src: url('../../assets/fonts/Satoshi-RegularItalic.ttf') format('truetype');
+  font-weight: 400;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Satoshi';
+  src: url('../../assets/fonts/Satoshi-Light.ttf') format('truetype');
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Satoshi';
+  src: url('../../assets/fonts/Satoshi-LightItalic.ttf') format('truetype');
+  font-weight: 300;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Satoshi';
+  src: url('../../assets/fonts/Satoshi-Medium.ttf') format('truetype');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Satoshi';
+  src: url('../../assets/fonts/Satoshi-MediumItalic.ttf') format('truetype');
+  font-weight: 500;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Satoshi';
+  src: url('../../assets/fonts/Satoshi-Bold.ttf') format('truetype');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Satoshi';
+  src: url('../../assets/fonts/Satoshi-BoldItalic.ttf') format('truetype');
+  font-weight: 700;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Satoshi';
+  src: url('../../assets/fonts/Satoshi-Black.ttf') format('truetype');
+  font-weight: 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Satoshi';
+  src: url('../../assets/fonts/Satoshi-BlackItalic.ttf') format('truetype');
+  font-weight: 900;
+  font-style: italic;
+  font-display: swap;
+}
+
+/* Font Size Variables */
+:root {
+  --text-label2: 0.625rem;
+  /* 10px */
+  --text-label1: 0.75rem;
+  /* 12px */
+  --text-paragraph2: 0.875rem;
+  /* 14px */
+  --text-paragraph1: 1rem;
+  /* 16px */
+  --text-subheading2: 1.125rem;
+  /* 18px */
+  --text-subheading1: 1.25rem;
+  /* 20px */
+  --text-heading4: 1.5rem;
+  /* 24px */
+  --text-heading3: 1.75rem;
+  /* 28px */
+  --text-heading2: 2rem;
+  /* 32px */
+  --text-heading1: 2.5rem;
+  /* 40px */
+  --text-display3: 3rem;
+  /* 48px */
+  --text-display2: 3.5rem;
+  /* 56px */
+  --text-display1: 3rem;
+  /* 48px (same as display3) */
+}
+
+/* Line Height Variables */
+:root {
+  --leading-none: 1;
+  --leading-tight: 1.25;
+  --leading-snug: 1.375;
+  --leading-normal: 1.5;
+  --leading-relaxed: 1.625;
+  --leading-loose: 2;
+}
+
+/* Letter Spacing Variables */
+:root {
+  --tracking-tighter: -0.05em;
+  --tracking-tight: -0.025em;
+  --tracking-normal: 0em;
+  --tracking-wide: 0.025em;
+  --tracking-wider: 0.05em;
+  --tracking-widest: 0.1em;
+}
+
+/* Base Typography Styles */
+body {
+  font-family: var(--font-sans);
+  font-size: var(--text-paragraph1);
+  line-height: var(--leading-normal);
+  letter-spacing: var(--tracking-normal);
+}
+
+/* Typography Utility Classes */
+.font-sans {
+  font-family: var(--font-sans);
+}
+
+.font-mono {
+  font-family: var(--font-mono);
+}
+
+.text-label2 {
+  font-size: var(--text-label2);
+}
+
+.text-label1 {
+  font-size: var(--text-label1);
+}
+
+.text-paragraph2 {
+  font-size: var(--text-paragraph2);
+}
+
+.text-paragraph1 {
+  font-size: var(--text-paragraph1);
+}
+
+.text-subheading2 {
+  font-size: var(--text-subheading2);
+}
+
+.text-subheading1 {
+  font-size: var(--text-subheading1);
+}
+
+.text-heading4 {
+  font-size: var(--text-heading4);
+}
+
+.text-heading3 {
+  font-size: var(--text-heading3);
+}
+
+.text-heading2 {
+  font-size: var(--text-heading2);
+}
+
+.text-heading1 {
+  font-size: var(--text-heading1);
+}
+
+.text-display3 {
+  font-size: var(--text-display3);
+}
+
+.text-display2 {
+  font-size: var(--text-display2);
+}
+
+.text-display1 {
+  font-size: var(--text-display1);
+}
+
+.leading-none {
+  line-height: var(--leading-none);
+}
+
+.leading-tight {
+  line-height: var(--leading-tight);
+}
+
+.leading-snug {
+  line-height: var(--leading-snug);
+}
+
+.leading-normal {
+  line-height: var(--leading-normal);
+}
+
+.leading-relaxed {
+  line-height: var(--leading-relaxed);
+}
+
+.leading-loose {
+  line-height: var(--leading-loose);
+}
+
+.tracking-tighter {
+  letter-spacing: var(--tracking-tighter);
+}
+
+.tracking-tight {
+  letter-spacing: var(--tracking-tight);
+}
+
+.tracking-normal {
+  letter-spacing: var(--tracking-normal);
+}
+
+.tracking-wide {
+  letter-spacing: var(--tracking-wide);
+}
+
+.tracking-wider {
+  letter-spacing: var(--tracking-wider);
+}
+
+.tracking-widest {
+  letter-spacing: var(--tracking-widest);
+}
