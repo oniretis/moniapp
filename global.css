@@ -1,9 +1,9 @@
+@import './design-system/colors.css';
+@import './design-system/typography/fonts.css';
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-
-@import './design-system/colors.css';
-@import './design-system/typography/fonts.css';
 
 @layer base {
     * {

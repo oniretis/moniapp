@@ -50,7 +50,15 @@ export const resolveColor = (colorValue?: ColorValue | string): string | undefin
     const colorGroup = colors[colorKey as ColorKey];
 
     if (colorGroup && shade) {
-      const resolvedColor = (colorGroup as any)[shade];
+      const numericShade = Number(shade);
+
+      // Defensive check for invalid shade (NaN)
+      if (isNaN(numericShade)) {
+        console.warn(`Invalid color combination: "${colorValue}". The shade "${shade}" is not a valid number.`);
+        return undefined;
+      }
+
+      const resolvedColor = (colorGroup as any)[numericShade];
 
       // Defensive runtime check: warn if the palette-shade combination doesn't exist
       if (resolvedColor === undefined) {

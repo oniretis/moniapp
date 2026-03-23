@@ -20,6 +20,8 @@ export {
 
 // Re-export color types with different names to avoid conflicts
 export type {
-    ColorKey as DesignSystemColorKey,
-    ColorShade as DesignSystemColorShade
+    ColorKey as DesignSystemColorKey
 } from './components/textComponent/index';
+
+// Export unified color shade type
+export type { ColorShade as DesignSystemColorShade } from './colors/theme';

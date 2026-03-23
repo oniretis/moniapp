@@ -120,4 +120,4 @@ export const colors = {
 
 export type ColorPalette = typeof colors;
 export type ColorName = keyof ColorPalette;
-// ColorShade is exported from textComponent/types.ts as DesignSystemColorShade for consistency
+export type ColorShade = keyof typeof colors.primary;
